@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike_orders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Customer bike orders data</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Bike Name</th>
+                <th>Color</th>
+                <th>Customer Name</th>
+                <th>Customer E-mail</th>
+                <th>Customer phone</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for bike in data %}
+                <tr>
+                    <td>{{ bike.Bike_name }}</td>
+                    <td>{{ bike.color }}</td>
+                    <td>{{ bike.cus_name }}</td>
+                    <td>{{ bike.email }}</td>
+                    <td>{{ bike.phone }}</td>
+
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="logout">
+        <p><a href="http://127.0.0.1:8000/">LOGOUT</a></p>
+    </div>
+</body>
+</html>

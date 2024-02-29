@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Shop</title>
+  <link rel="stylesheet" href="../../static/images/img21.jpeg">
+</head>
+<body>
+    <style>
+        .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+}
+
+.image-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.details-container {
+  flex: 2;
+}
+
+.details-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.details-container p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.details-container button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.details-container button a {
+  text-decoration: none;
+  color: white;
+}
+    </style>
+  <div class="container">
+    <div class="image-container">
+      <img src="../../static/images/img3.jpeg" alt="bike Image">
+    </div>
+    <div class="details-container">
+      <h2>Bike Name:HONDA DIO</h2>
+      <p>colour:yellow</p>
+      <p> Modelyear: 2022</p>
+      <p>millege:50kmpl</p>
+      <p>cc model: 120cc </p>
+      <p>cost:3000</p>
+      <button onclick="redirectToOrders()">BOOK NOW</button>
+    </div>
+  </div>
+
+  <script>
+    function redirectToOrders() {
+      window.location.href = "http://127.0.0.1:8000/orders/";
+    }
+  </script>
+</body>
+</html>
